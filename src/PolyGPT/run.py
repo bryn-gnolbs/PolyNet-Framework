@@ -40,7 +40,7 @@ def evaluate_model(model: GPT2LMHeadModel, tokenizer, dataset, device: torch.dev
 
 def main():
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-    model_path = "fine_tuned_model.pth"
+    model_path = "./Models/fine_tuned_model.pth"
     model = load_model(model_path, device)
 
     tokenizer = GPT2Tokenizer.from_pretrained("gpt2")
