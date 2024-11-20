@@ -1,0 +1,25 @@
+[project]
+name = "polynet"
+version = "0.1.0"
+description = "polynet"
+authors = [
+    {name = "bryn-gnolbs", email = "173369134+bryn-gnolbs@users.noreply.github.com"},
+    {name = "acidical", email = "21656053-acidical@users.noreply.gitlab.com"},
+]
+dependencies = ["torch>=2.5.1", "torchvision>=0.20.1", "torchaudio>=2.5.1", "nvidia-ml-py>=12.560.30", "matplotlib>=3.9.2", "opencv-python>=4.10.0.84", "transformers>=4.46.2", "datasets>=3.1.0", "wandb>=0.18.7", "nltk>=3.9.1"]
+requires-python = "==3.12.*"
+readme = "README.md"
+# license = {text = "MIT"}
+
+
+[tool.pdm]
+distribution = false
+
+[dependency-groups]
+dev = [
+    "ruff>=0.7.4",
+    "pyright>=1.1.389",
+]
+
+[tool.ruff.format]
+skip-magic-trailing-comma = true
